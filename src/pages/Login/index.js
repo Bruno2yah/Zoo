@@ -1,10 +1,12 @@
 import styles from './styles';
-import { View,Text,Pressable,TextInput,Image, ActivityIndicator} from 'react-native';
+import { View,Text,Pressable,TextInput,Image, ImageBackground, ActivityIndicator} from 'react-native';
 import { useState } from 'react';
-import imgPanda from '../../../assets/img/Panda.png';
 import { useNavigation } from '@react-navigation/native';
 import { carregar } from './axios';
 import { getEmailStorage,getSenhaStorage } from './asyncStorage';
+
+const fundo = require('../../../assets/img/Fundo.png')
+const logo = require('../../../assets/img/Logo.png')
 
 export default function App(){
     const navigation = useNavigation();
@@ -50,27 +52,20 @@ export default function App(){
             />)
     }
     return (
-        <View style={styles.container}>
-            
-            <View style={styles.boxImg}>
-                <Image  style={styles.img} source={imgPanda}/>
-            </View>
-            <View style={styles.boxTitulo}>
-                <Text style={styles.textTitulo}>Login</Text>
-            </View>   
+        <ImageBackground source = {fundo} style={styles.imageBackground} resizeMode='cover'>
+            <Image source={logo}/>
             <View style={styles.boxInput}>
-            <TextInput
-            style={styles.input}
-            onChangeText={emailConfi => setEmailConfi(emailConfi)}
-            placeholder='email'
-            editable = {true}
-            />
-            <TextInput 
-            style={styles.input}
-            secureTextEntry={true}
-            onChangeText={senhaConfi => setSenhaConfi(senhaConfi)}
-            placeholder='senha'
-            /> 
+                <TextInput
+                style={styles.input}
+                onChangeText={emailConfi => setEmailConfi(emailConfi)}
+                placeholder='email'
+                />
+                <TextInput 
+                style={styles.input}
+                secureTextEntry={true}
+                onChangeText={senhaConfi => setSenhaConfi(senhaConfi)}
+                placeholder='senha'
+                /> 
             </View>
             <View style={styles.boxSenha}>
                 <Text style={styles.textSenha} onPress={() => navigation.navigate('register')}>Esqueceu sua senha ?</Text>
@@ -80,7 +75,7 @@ export default function App(){
                     <Text style={styles.textButton}>Logar</Text>
                 </Pressable>
             </View>
-        </View>
+        </ImageBackground>
     )
 
 }

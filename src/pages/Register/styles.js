@@ -1,82 +1,55 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-    container: {
+    imageBackground: {
       flex: 1,
-      backgroundColor: '#59D5E0',
+      width: '100%',
+      height: '100%',
+      justifyContent: 'center',
+      alignItems: 'center'
     },
-    boxButton:{
-      flex:0.15,
-      width:'100%',
-      justifyContent:'center',
-      alignItems:'center',
- 
+    logo: {
+      marginTop: '10%',
     },
     boxInput:{
-      flex:0.4,
-      justifyContent:'center',
-      alignItems:'center',
-      gap: 15,
-    },
-    boxImg:{
-      flex:0.45,
-      width:'100%',
-      alignItems:'center',
+      marginTop: '20%',
+      gap: 20,
+      width: '60%',
       justifyContent: 'center',
-      backgroundColor:'#FFC700',
-      borderBottomEndRadius:150,
-      borderBottomStartRadius:150,
-    
-    }, 
+      alignItems: 'center',
+    },
     input:{  
-      width: '80%',
-        height: 40,
-        margin:5,
-        padding:10,
-        borderRadius: 50,
-        color: '#000',
-        outlineStyle: 'none',
-        backgroundColor: '#FFC700',
-  
-      },
-    text:{
-      textAlign:'center',
-      color:'#000',
+      width: '100%',
+      height: 40,
+      padding:10,
+      borderRadius: 10,
+      outlineStyle: 'none',
+      backgroundColor: '#F7FFFF',
+      borderWidth: 1,
+      borderColor: '#205732'
     },
-    textTitulo:{
+    boxButton:{
+      marginTop: '5%',
+      gap: 20,
+      width: '50%',
+    },  
+    button:{
+      width: '100%',
+      height: 40,
+      backgroundColor: '#205732',
+      borderRadius: 8,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    textButton:{
       textAlign:'center',
+      color: 'white',
       fontWeight: 'bold',
-      fontSize: 20,
-      margin:5,
-      
-
-    },
-    textSubTitulo:{
-      textAlign:'center',
-      fontSize: 12,
-    },
-      button:{
-        width: '60%',
-        height:40,  
-        borderRadius:50,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFC700',
-        shadowColor: '#000',
-        shadowOpacity: 1,
-        shadowRadius: 20,
-       
+      fontSize: 16,
     },
     load:{
       flex:1,
       justifyContent:'center',
       alignItems:'center'
-     }, 
-    img:{
-      width:'60%',
-      height:'70%',
-  
-   },
-     
-    
+     },     
 })
