@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/04/2024 às 06:04
+-- Tempo de geração: 03/04/2024 às 06:00
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -31,58 +31,17 @@ CREATE TABLE `tbanimal` (
   `idAnimal` int(11) NOT NULL,
   `nomeAnimal` varchar(100) NOT NULL,
   `imgAnimal` varchar(200) NOT NULL,
-  `descriçãoAnimal` varchar(200) NOT NULL,
+  `descricaoAnimal` varchar(200) NOT NULL,
   `epocaAcasalamentoAnimal` varchar(100) NOT NULL,
-  `idTerritorio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `tbterritorio`
---
-
-CREATE TABLE `tbterritorio` (
-  `idTerritorio` int(11) NOT NULL,
-  `nomeTerritorio` int(100) NOT NULL,
-  `imgTerritorio` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `tbuser`
---
-
-CREATE TABLE `tbuser` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `senha` varchar(20) NOT NULL,
-  `telefone` varchar(15) NOT NULL
+  `mediaVidaAnimal` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbuser`
+-- Despejando dados para a tabela `tbanimal`
 --
 
-INSERT INTO `tbuser` (`id`, `nome`, `email`, `senha`, `telefone`) VALUES
-(1, 'Luciano', 'luciano@gmail.com', '123', '11987654321'),
-(2, 'Chaves', 'chaves@gmail.com', '123', '9111111111'),
-(3, 'Chiquinha', 'chiquinha@gmail.com', '123', '40028922'),
-(34, 'eae', 'eae', 'eae', 'eae'),
-(35, 'b', 'b', 'b', 'b'),
-(36, 'c', 'c', 'c', 'c'),
-(37, 'd', 'd', 'd', 'd'),
-(38, 'e', 'e', 'e', 'e'),
-(41, 'ad', 'ad', 'ad', 'ad'),
-(42, 'asdasd', 'asdasdas', 'sadas', 'sadasdasd'),
-(43, 'ad', 'ddd', 'aaaaaaaaaaaaaaaaaaaa', 'dddaaaaaaaaa'),
-(46, 'asdas', 'asdas', 'asdsad', 'dasd'),
-(47, 'sda', 'dsa', 'sad', 'sad'),
-(48, 'sddsad', 'dsadsad', 'dsadasd', 'sadsadsadsa'),
-(53, 'dsasadasdadd', 'sadasdasdas', 'asdasdasds', 'dasdsadas'),
-(54, 'a', 'a', 'ae', 'ae');
+INSERT INTO `tbanimal` (`idAnimal`, `nomeAnimal`, `imgAnimal`, `descricaoAnimal`, `epocaAcasalamentoAnimal`, `mediaVidaAnimal`) VALUES
+(5, 'Leão', '00c2c7eeb20670462f2f756fe7f2bbd6.jpg', 'Rei delas', 'Rei delas', '25 anos');
 
 --
 -- Índices para tabelas despejadas
@@ -92,21 +51,7 @@ INSERT INTO `tbuser` (`id`, `nome`, `email`, `senha`, `telefone`) VALUES
 -- Índices de tabela `tbanimal`
 --
 ALTER TABLE `tbanimal`
-  ADD PRIMARY KEY (`idAnimal`),
-  ADD KEY `idTerritorio` (`idTerritorio`);
-
---
--- Índices de tabela `tbterritorio`
---
-ALTER TABLE `tbterritorio`
-  ADD PRIMARY KEY (`idTerritorio`);
-
---
--- Índices de tabela `tbuser`
---
-ALTER TABLE `tbuser`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`,`telefone`);
+  ADD PRIMARY KEY (`idAnimal`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -116,29 +61,7 @@ ALTER TABLE `tbuser`
 -- AUTO_INCREMENT de tabela `tbanimal`
 --
 ALTER TABLE `tbanimal`
-  MODIFY `idAnimal` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `tbterritorio`
---
-ALTER TABLE `tbterritorio`
-  MODIFY `idTerritorio` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `tbuser`
---
-ALTER TABLE `tbuser`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
---
--- Restrições para tabelas despejadas
---
-
---
--- Restrições para tabelas `tbanimal`
---
-ALTER TABLE `tbanimal`
-  ADD CONSTRAINT `idTerritorio` FOREIGN KEY (`idTerritorio`) REFERENCES `tbterritorio` (`idTerritorio`);
+  MODIFY `idAnimal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
