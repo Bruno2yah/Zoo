@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 export default function StackRoutes() {
     return (
 
-<Stack.Navigator initialRouteName='Splash'>
+<Stack.Navigator initialRouteName='Territorio'>
     <Stack.Screen
         name= 'home'
         component={home}
