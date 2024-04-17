@@ -54,8 +54,7 @@ $territorios = territorioDao::selectAll();
             <thead>
               <tr>
                 <th class="col-md-1">ID</th>
-                <th class="col-md-3">Nome </th>
-                <th class="col-md-1">Imagem</th>
+                <th class="col-md-1">Nome </th>
                 <th class="text-center col-md-1">Alterar</th>
                 <th class="text-center col-md-1">Excluir</th>
               </tr>
@@ -63,7 +62,7 @@ $territorios = territorioDao::selectAll();
               <tr>
                 <td><?=$territorio[0]?></td>
                 <td><?=$territorio[1]?></td>
-                <td><?=$territorio[2]?></td>
+
                 <td class="text-center">
                   <form action="process.php" method="POST">
                     <input type="hidden" class="form-control" id="acao" name="acao" value="SELECTID">

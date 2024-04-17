@@ -11,6 +11,9 @@ $routes = [
     '/userShow' => 'UserController@show',
     '/userUpdate' => 'UserController@update',
     '/userLogin' => 'UserController@checkCredentials',
+    '/territorio' => 'TerritorioController@index',
+    '/animal' => 'AnimalController@index',
+    '/animalShow' => 'AnimalController@show',
     // Adicione outras rotas conforme necessário
 ];
 

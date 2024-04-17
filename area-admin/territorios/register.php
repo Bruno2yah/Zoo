@@ -47,7 +47,7 @@ session_start();
               <strong>INFORMAÇÕES DO TERRITORIO</strong>
               <input type="text" name="idUser" id="idUser" placeholder="id" value="<?=$id_Territorio?>">
               <input type="text" name="nomeFoto" id="nomeFoto" value="<?=$imagem_Territorio?>">
-              <input type="text" value="<?=$imagem_Territorio?'ATUALIZAR':'SALVAR'?>" name="acao" >
+              <input type="text" value="<?=$id_Territorio?'ATUALIZAR':'SALVAR'?>" name="acao" >
 
             </div>
             <div class="card-body row bg-black d-flex justify-content-center align-items-center w-100">

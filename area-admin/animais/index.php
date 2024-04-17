@@ -55,9 +55,7 @@ $animais = animalDao::selectAll();
               <tr>
                 <th class="col-md-1">ID</th>
                 <th class="col-md-1">Nome</th>
-                <th class="col-md-3">Descrição</th>
-                <th class="col-md-3">Vida</th>
-                <th class="col-md-2">Acasalamento</th>
+                <th class="col-md-1">Territorio</th>
                 <th class="text-center col-md-1">Alterar</th>
                 <th class="text-center col-md-1">Excluir</th>
               </tr>
@@ -65,9 +63,7 @@ $animais = animalDao::selectAll();
               <tr>
                 <td><?=$animal[0]?></td>
                 <td><?=$animal[1]?></td>
-                <td> <?=$animal[2]?></td>
-                <td><?=$animal[5]?></td>
-                <td><?=$animal[3]?></td>
+                <td> <?=$animal[6]?></td>
                 <td class="text-center">
                   <form action="process.php" method="POST">
                     <input type="hidden" class="form-control" id="acao" name="acao" value="SELECTID">

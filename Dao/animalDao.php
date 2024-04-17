@@ -59,6 +59,14 @@ require_once (__DIR__ . '../../Dao/Conexao.php');
             $stmt->bindValue(7, $id); // Certifique-se de que o ID seja o terceiro valor
             return $stmt->execute();
         }
+        public static function selectAllApi($id){
+            $conexao = Conexao::conectar();
+            $query = "SELECT * FROM tbanimal where fk_idTerritorio = ?";
+            $stmt = $conexao->prepare($query);
+            $stmt->bindValue(1, $id);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        }
        
     }
 ?>
